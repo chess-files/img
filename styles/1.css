@@ -1,10 +1,13 @@
-/* ==UserStyle==
-    @name           chesscom, chessable, chessgames, chesskid, chessking, chesstempo, lichess
-    @namespace      chess-files
-    @version        1.0
-    @description    engin
-    @author         e-ng.in
-==/UserStyle== */
+// ==UserScript==
+// @name        chess
+// @match       *://*.chess.com/*
+// @match       *://*.chessable.com/*
+// @match       *://*.chessgames.com/*
+// @match       *://*.chesskid.com/*
+// @match       *://*.chessking.com/*
+// @match       *://*.chesstempo.com/*
+// @match       *://*.lichess.org/*
+// ==/UserScript==
 
 
 

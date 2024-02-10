@@ -1,26 +1,49 @@
 /* ==UserStyle==
     @name           chesscom, chessable, chessgames, chesskid, chessking, chesstempo, lichess
-    @namespace      chess-src
+    @namespace      chess-files
     @version        1.0
     @description    engin
     @author         e-ng.in
 ==/UserStyle== */
+
+
+
+
+// create a style element
+// https://raw.githubusercontent.com/sharechess/sharechess/main/public
+// https://raw.githubusercontent.com/chess-files/img/main
+
+const style = document.createElement('style');
+const url = "https://raw.githubusercontent.com/chess-files/repo/main";
+const piece = "cardinal";
+const extension = "png";
+const background = "magnus.png";
+
+// add the CSS as a string using template literals
+style.appendChild(document.createTextNode(`
+
+
+
 @-moz-document domain(chess.com), domain(chessable.com), domain(chessgames.com), domain(chesskid.com), domain(chessking.com), domain(chesstempo.com), domain(lichess.org){
     :root {
-        --sharechess-board-url: url("https://raw.githubusercontent.com/chess-src/img/main/backgrounds/tactics-frenzy.png");
-        --sharechess-rw-url: url("https://raw.githubusercontent.com/chess-src/img/main/pieces/cardinal-green/rw.png");
-        --sharechess-nw-url: url("https://raw.githubusercontent.com/chess-src/img/main/pieces/cardinal-green/nw.png");
-        --sharechess-bw-url: url("https://raw.githubusercontent.com/chess-src/img/main/pieces/cardinal-green/bw.png");
-        --sharechess-qw-url: url("https://raw.githubusercontent.com/chess-src/img/main/pieces/cardinal-green/qw.png");
-        --sharechess-kw-url: url("https://raw.githubusercontent.com/chess-src/img/main/pieces/cardinal-green/kw.png");
-        --sharechess-pw-url: url("https://raw.githubusercontent.com/chess-src/img/main/pieces/cardinal-green/pw.png");
-        --sharechess-rb-url: url("https://raw.githubusercontent.com/chess-src/img/main/pieces/cardinal-green/rb.png");
-        --sharechess-nb-url: url("https://raw.githubusercontent.com/chess-src/img/main/pieces/cardinal-green/nb.png");
-        --sharechess-bb-url: url("https://raw.githubusercontent.com/chess-src/img/main/pieces/cardinal-green/bb.png");
-        --sharechess-qb-url: url("https://raw.githubusercontent.com/chess-src/img/main/pieces/cardinal-green/qb.png");
-        --sharechess-kb-url: url("https://raw.githubusercontent.com/chess-src/img/main/pieces/cardinal-green/kb.png");
-        --sharechess-pb-url: url("https://raw.githubusercontent.com/chess-src/img/main/pieces/cardinal-green/pb.png");
-    }
+
+--sharechess-rw-url: url("${url}/pieces/${piece}/rw.${extension}");
+--sharechess-nw-url: url("${url}/pieces/${piece}/nw.${extension}");
+--sharechess-bw-url: url("${url}/pieces/${piece}/bw.${extension}");
+--sharechess-qw-url: url("${url}/pieces/${piece}/qw.${extension}");
+--sharechess-kw-url: url("${url}/pieces/${piece}/kw.${extension}");
+--sharechess-pw-url: url("${url}/pieces/${piece}/pw.${extension}");
+
+--sharechess-rb-url: url("${url}/pieces/${piece}/rb.${extension}");
+--sharechess-nb-url: url("${url}/pieces/${piece}/nb.${extension}");
+--sharechess-bb-url: url("${url}/pieces/${piece}/bb.${extension}");
+--sharechess-qb-url: url("${url}/pieces/${piece}/qb.${extension}");
+--sharechess-kb-url: url("${url}/pieces/${piece}/kb.${extension}");
+--sharechess-pb-url: url("${url}/pieces/${piece}/pb.${extension}");
+
+--sharechess-board-url: url("${url}/backgrounds/${background}");
+
+}
 }
 
 @-moz-document domain("chess.com") {
@@ -49,3 +72,11 @@
 
 @-moz-document domain("lichess.org") {
 .is2d cg-board {background-image: var(--sharechess-board-url) !important;}.is2d coords {--cg-ccw: #fff !important;--cg-ccb: #fff !important;}.is2d piece {filter: none;}.is2d.mini-board piece, .is2d.mini-game piece {filter: none;}square.last-move {background-color: #ff000036 !important;}.is2d .rook.white {background-image: var(--sharechess-rw-url) !important;}.is2d .knight.white {background-image: var(--sharechess-nw-url) !important;}.is2d .bishop.white {background-image: var(--sharechess-bw-url) !important;}.is2d .queen.white {background-image: var(--sharechess-qw-url) !important;}.is2d .king.white {background-image: var(--sharechess-kw-url) !important;}.is2d .pawn.white {background-image: var(--sharechess-pw-url) !important;}.is2d .rook.black {background-image: var(--sharechess-rb-url) !important;}.is2d .knight.black {background-image: var(--sharechess-nb-url) !important;}.is2d .bishop.black {background-image: var(--sharechess-bb-url) !important;}.is2d .queen.black {background-image: var(--sharechess-qb-url) !important;}.is2d .king.black {background-image: var(--sharechess-kb-url) !important;}.is2d .pawn.black {background-image: var(--sharechess-pb-url) !important;}body.dark {background: #302e2b !important;}#top{max-width:5000px !important}html {border-radius: 0px;}.site-title, .site-title-nav__donate {display: none;}.eval-gauge {width: var(--gauge-width);position: relative;background: #fff;border-radius: 0px 0px 0px 0px;overflow: hidden;margin-right: 1px;margin-left: 1px;}.eval-gauge::after {content: '';display: block;position: absolute;top: 0;bottom: 0;left: 0;right: 0;box-shadow: 0 0 0px rgba(0, 0, 0, 0) inset;border-radius: 0px 0px 0px 0px;}.eval-gauge::after {content: "";display: block;position: absolute;top: 0;bottom: 0;left: 0;right: 0;box-shadow: 0 0 1px rgba(0, 0, 0, 1) inset;}.analyse__tools {box-shadow: 0 0 1px rgba(0, 0, 0, 1) inset;}* {-webkit-box-shadow: none !important;-moz-box-shadow: none !important;box-shadow: none !important;}cg-board {box-shadow: 0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.2),0 1px 5px 0 rgba(0,0,0,.12) !important;}}
+
+
+
+`));
+
+// add it to the head
+const head = document.getElementsByTagName('head')[0];
+head.appendChild(style);
